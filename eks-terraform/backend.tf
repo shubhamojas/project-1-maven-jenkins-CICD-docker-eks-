@@ -7,7 +7,7 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "vsv-vsv-vsv "
+    bucket = "vsv-vsv-vsv"
     key    = "eks/terraform.tfstate"
     region = "us-east-1"
   }
