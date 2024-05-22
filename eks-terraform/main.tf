@@ -4,7 +4,7 @@ provider "aws" {
 
  #Creating IAM role for EKS
   resource "aws_iam_role" "master" {
-    name = "vardhan-eks-master"
+    name = "vardhan-eks-master2"
 
     assume_role_policy = jsonencode({
       "Version": "2012-10-17",
@@ -36,7 +36,7 @@ provider "aws" {
   }
 
   resource "aws_iam_role" "worker" {
-    name = "vardhan-eks-worker"
+    name = "vardhan-eks-worker2"
 
     assume_role_policy = jsonencode({
       "Version": "2012-10-17",
@@ -106,7 +106,7 @@ provider "aws" {
 
   resource "aws_iam_instance_profile" "worker" {
     depends_on = [aws_iam_role.worker]
-    name       = "vardhan-eks-worker-new-profile"
+    name       = "vardhan-eks-worker-new-profile2"
     role       = aws_iam_role.worker.name
   }
  
