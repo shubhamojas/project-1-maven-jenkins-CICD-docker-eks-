@@ -7,7 +7,7 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "shubham_bucket"
+    bucket = "shubhamproject"
     key    = "eks/terraform.tfstate"
     region = "us-east-1"
   }
